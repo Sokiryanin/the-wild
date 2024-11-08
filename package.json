@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-vite-template",
+  "name": "the-wild",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-vite-template/",
+    "build": "vite build --base=/the-wild/",
     "preview": "vite preview"
   },
   "devDependencies": {

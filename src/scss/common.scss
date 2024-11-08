@@ -1,0 +1,57 @@
+// Шапка блоку
+
+.block-header {
+    display: grid;
+    gap: toRem(20);
+    justify-items: start;
+
+    // .block-header__label
+
+    &__label {
+        line-height: 1.5625;
+        text-transform: capitalize;
+    }
+
+    // .block-header__title
+
+    &__title {
+        font-size: 48px;
+        text-transform: capitalize;
+        color: $goldColor;
+        font-family: "Italiana";
+    }
+
+    // .block-header__text
+
+    &__text {
+        // font-style: italic;
+        line-height: 1.5625;
+        color: $mainColor;
+        display: grid;
+        gap: toRem(20);
+
+        blockquote {
+
+            font-style: italic;
+        }
+    }
+
+}
+
+/*
+
+        <div class="block-header">
+          <div class="block-header__label">About us</div>
+          <h2 class="block-header__title">Treating pet like Royalty</h2>
+          <div class="block-header__text">
+            <blockquote>
+              “They’re not just pets, they’re family”
+            </blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue ultrices, in tempus elit
+              tristique. Aliquam ultrices sem non.</p>
+          </div>
+          <a href="#" class="block-header__button button"><span>Explore</span>
+          </a>
+        </div>
+
+*/
