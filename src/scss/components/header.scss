@@ -1,5 +1,9 @@
 .header {
-
+position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
     // .header__container
 
     &__container {
@@ -157,6 +161,7 @@
         color: $bgGold;
         font-weight: 300;
         line-height: 1.52;
+        
         @media (max-width:$mobile) {
                 color: #fff;
             }

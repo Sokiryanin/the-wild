@@ -26,7 +26,7 @@ mainFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-// mainFunctions.spollers();
+mainFunctions.spollers();
 
 /*
 Модуль "Таби"
@@ -86,15 +86,14 @@ import './js/dynamic_adapt.js';
 import * as myForms from './js/forms/forms.js';
 
 /* Робота з полями форми */
-/*
+
 myForms.formFieldsInit({
-	viewPass: false,
-	autoHeight: false
+  viewPass: false,
+  autoHeight: false,
 });
-*/
 
 /* Надсилання форми */
-// myForms.formSubmit();
+myForms.formSubmit();
 
 /* Модуль форми "кількість" */
 // myForms.formQuantity();
@@ -115,7 +114,7 @@ myForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-// import './js/sliders.js';
+import './js/sliders.js';
 
 // Модулі роботи з прокручуванням сторінки ==============================================================
 /*
