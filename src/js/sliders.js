@@ -9,7 +9,7 @@
 // Приклад: { Navigation, Autoplay }
 
 import Swiper from 'swiper';
-import { Navigation, Controller } from 'swiper/modules';
+import { Navigation, Controller, Parallax } from 'swiper/modules';
 
 /*
 Основні модулі слайдера:
@@ -32,19 +32,113 @@ function initSliders() {
   if (document.querySelector('.hero__slider')) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
+
+    // const miniSlider = new Swiper('.hero__mini-slider', {
+    //   // Вказуємо склас потрібного слайдера
+    //   // Підключаємо модулі слайдера
+    //   // для конкретного випадку
+    //   modules: [Navigation, Controller],
+    //   observer: true,
+    //   loop: true,
+    //   observeParents: true,
+    //   slidesPerView: 'auto',
+    //   slideToClickedSlide: true,
+    //   spaceBetween: 20,
+    //   //autoHeight: true,
+    //   speed: 800,
+
+    //   //touchRatio: 0,
+    //   //simulateTouch: false,
+    //   //loop: true,
+    //   //preloadImages: false,
+    //   //lazy: true,
+
+    //   /*
+    // 	// Ефекти
+    // 	effect: 'fade',
+    // 	autoplay: {
+    // 		delay: 3000,
+    // 		disableOnInteraction: false,
+    // 	},
+    // 	*/
+
+    //   // Пагінація
+    //   /*
+    // 	pagination: {
+    // 		el: '.swiper-pagination',
+    // 		clickable: true,
+    // 	},
+    // 	*/
+
+    //   // Скроллбар
+    //   /*
+    // 	scrollbar: {
+    // 		el: '.swiper-scrollbar',
+    // 		draggable: true,
+    // 	},
+    // 	*/
+
+    //   // Кнопки "вліво/вправо"
+    //   navigation: {
+    //     prevEl: '.swiper-button-prev',
+    //     nextEl: '.swiper-button-next',
+    //   },
+    //   /*
+    // 	// Брейкпоінти
+    // 	breakpoints: {
+    // 		640: {
+    // 			slidesPerView: 1,
+    // 			spaceBetween: 0,
+    // 			autoHeight: true,
+    // 		},
+    // 		768: {
+    // 			slidesPerView: 2,
+    // 			spaceBetween: 20,
+    // 		},
+    // 		992: {
+    // 			slidesPerView: 3,
+    // 			spaceBetween: 20,
+    // 		},
+    // 		1268: {
+    // 			slidesPerView: 4,
+    // 			spaceBetween: 30,
+    // 		},
+    // 	},
+    // 	*/
+    //   // Події
+    //   on: {
+    //     init: function (slider) {
+    //       console.log(slider);
+    //       console.log(slider.slides);
+
+    //       slider.slides.forEach(slide => {
+    //         const imageSrc = slide
+    //           .querySelector('.slide-hero__image')
+    //           .getAttribute('src');
+    //         const topImage = `
+    //         <div class="slide-hero__top-image">
+    //               <img src="${imageSrc}" alt="Image">
+    //           </div>
+    //         `;
+    //         slide.insertAdjacentHTML('beforeend', topImage);
+    //       });
+    //     },
+    //   },
+    // });
+
     const mainSlider = new Swiper('.hero__slider', {
       // Вказуємо склас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
-      modules: [Navigation, Controller],
+      modules: [Navigation, Controller, Parallax],
       observer: true,
       loop: true,
       observeParents: true,
-      slidesPerView: 1,
+      slidesPerView: 'auto',
       spaceBetween: 30,
       //autoHeight: true,
       speed: 800,
-
+      parallax: true,
       //touchRatio: 0,
       //simulateTouch: false,
       //loop: true,
@@ -118,107 +212,15 @@ function initSliders() {
                   <img src="${imageSrc}" alt="Image">
               </div>
             `;
-            slide.insertAdjacentHTML('beforeend', topImage);
+            const slideContent = slide.querySelector('.slide-hero__content');
+            slideContent.insertAdjacentHTML('beforeend', topImage);
           });
         },
       },
     });
 
-    const miniSlider = new Swiper('.hero__mini-slider', {
-      // Вказуємо склас потрібного слайдера
-      // Підключаємо модулі слайдера
-      // для конкретного випадку
-      modules: [Navigation, Controller],
-      observer: true,
-      loop: true,
-      observeParents: true,
-      slidesPerView: 'auto',
-      slideToClickedSlide: true,
-      spaceBetween: 20,
-      //autoHeight: true,
-      speed: 800,
-
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      /*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-      // Пагінація
-      /*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-      // Скроллбар
-      /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-      // Кнопки "вліво/вправо"
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
-      /*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-      // Події
-      on: {
-        init: function (slider) {
-          console.log(slider);
-          console.log(slider.slides);
-
-          slider.slides.forEach(slide => {
-            const imageSrc = slide
-              .querySelector('.slide-hero__image')
-              .getAttribute('src');
-            const topImage = `
-            <div class="slide-hero__top-image">
-                  <img src="${imageSrc}" alt="Image">
-              </div>
-            `;
-            slide.insertAdjacentHTML('beforeend', topImage);
-          });
-        },
-      },
-    });
-
-    mainSlider.controller.control = miniSlider;
-    miniSlider.controller.control = mainSlider;
+    // mainSlider.controller.control = miniSlider;
+    // miniSlider.controller.control = mainSlider;
   }
 }
 

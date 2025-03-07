@@ -8,7 +8,7 @@
     &__container {
         display: grid;
         align-items: center;
-        grid-template-columns: 1fr 44% 1fr;
+        grid-template-columns: 1fr 72%;
         gap: toRem(30);
         padding-top: toRem(150);
         padding-bottom: toRem(50);
@@ -52,6 +52,7 @@
     // .hero__slider
 
     &__slider.swiper {
+        
         padding-top: toRem(50);
         padding-bottom: toRem(50);
         z-index: 2;
@@ -108,8 +109,7 @@
 
     // .hero__mini 
 
-    &__mini {
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &__mini {
         overflow: hidden;
         padding-top: toRem(30);
         padding-bottom: toRem(30);
@@ -139,14 +139,7 @@
 }
 
 .slide-hero {
-    aspect-ratio: 1/1;
-    border: toRem(1) solid $bgGold;
-    border-radius: 50%;
-    flex: 1 1 auto;
-    position: relative;
-    @include adaptiveValue("padding", 24, 10);
-
-    &--mini {
+&--mini {
         border: toRem(1) solid $bgGold;
         flex: 0 0 auto;
         padding: toRem(3);
@@ -155,6 +148,16 @@
         width: toRem(117);
     }
 
+// .slide-hero__content
+&__content {
+    width: toRem(117);
+    aspect-ratio: 1/1;
+    border: toRem(1) solid $bgGold;
+    border-radius: 50%;
+    flex: 1 1 auto;
+    position: relative;
+    @include adaptiveValue("padding", 24, 10);
+}
     // .slide-hero__body
 
     &__body {
