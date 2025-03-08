@@ -139,18 +139,18 @@
 }
 
 .slide-hero {
-&--mini {
-        border: toRem(1) solid $bgGold;
-        flex: 0 0 auto;
-        padding: toRem(3);
-        border-radius: 50%;
-        aspect-ratio: 1/1;
-        width: toRem(117);
-    }
+// &--mini {
+    //         border: toRem(1) solid $bgGold;
+    //         flex: 0 0 auto;
+    //         padding: toRem(3);
+    //         border-radius: 50%;
+    //         aspect-ratio: 1/1;
+    //         width: toRem(117);
+    //     }
 
 // .slide-hero__content
 &__content {
-    width: toRem(117);
+
     aspect-ratio: 1/1;
     border: toRem(1) solid $bgGold;
     border-radius: 50%;
