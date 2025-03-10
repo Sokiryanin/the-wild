@@ -175,34 +175,25 @@ function initSliders() {
         prevEl: '.hero__arrow--left',
         nextEl: '.hero__arrow--right',
       },
-      /*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
+
+      // Брейкпоінти
+      breakpoints: {
+        320: {
+          centeredSlides: true,
+          spaceBetween: 30,
+        },
+        768: {
+          centeredSlides: true,
+          spaceBetween: 30,
+        },
+        1200: {
+          centeredSlides: false,
+        },
+      },
+
       // Події
       on: {
         init: function (slider) {
-          console.log(slider);
-          console.log(slider.slides);
-
           slider.slides.forEach(slide => {
             const imageSrc = slide
               .querySelector('.slide-hero__image')
